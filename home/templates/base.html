@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rufina" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style type="text/css">
+    html, body{
+        margin:0px;
+        padding:0px;
+        width:100%;
+        height:100%;
+        position:relative;
+        z-index: 1000;
+    }  
+    .center{
+        display: block;
+        margin: 0 auto;
+    }
+    .nav-text{
+        color:#808080;
+        font-family: 'Rufina', serif;
+        margin-right: 50px;
+        font-weight: bold;
+    }
+    a:hover{
+        color:#8C1A14;
+        background-color:#f1f1f1;
+    }
+    .down{
+        margin-top: 10px;
+    }
+    .active{
+        color:#8C1A15;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        color:black;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color:grey;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 0.9em;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #content-container{
+        position: relative;
+        width:95%;
+        margin-left: 2.5%;
+        margin-top: 2%;
+        background-color: #f1f1f1;
+        padding: 10px;
+    }
+    #overlay-top{
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        margin-top: -2%;
+    }
+    #overlay-bottom{
+        position: fixed; 
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        height:5%;
+    }
+    .priority{
+        z-index: 10000;
+    }
+    #footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:100%;
+        background-color:#9099A2;
+        z-index:1000;
+        color:white;
+        height:300px;
+        top:100px;
+        left: 0;
+    }
+    h1{
+        font-family: 'Merriweather', serif;
+        color:#0789BB;
+    }
+</style>
+
+{% block style %}
+{% endblock %}
+</head>
+
+<body style="position:relative; z-index:999;">
+<div id="overlay-top">
+<img class="img-fluid center priority" src='{% static "images/ttf.png" %}' width="600px" height="200px">
+ <nav class="navbar navbar-light navbar-toggleable-md ">
+
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: -50px">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="margin:0 auto;">
+      <li class="nav-item">
+        <a class="nav-link nav-text {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="http://localhost:8000">Home</a>
+      </li>
+
+
+      <div class="dropdown">
+      <li class="nav-item-indent nav-item">
+        <a class="nav-link nav-text dropbtn {% if request.resolver_match.url_name == 'programs' %}active{% endif %}" href="http://localhost:8000/programs/">Programs</a>
+      </li>
+      <div class="dropdown-content">
+        <a href="http://localhost:8000/programs/#tutoring">Tutoring</a>
+        <a href="http://localhost:8000/programs/#debate">Debate</a>
+        <a href="http://localhost:8000/programs/#programming">Programming</a>
+        <a href="http://localhost:8000/student_signup">Signup</a>
+      </div>
+      </div> 
+
+
+      <div class="dropdown">
+      <li class="nav-item-indent nav-item">
+        <a class="nav-link dropbtn nav-text {% if request.resolver_match.url_name == 'team' %}active{% endif %}" href="http://localhost:8000/team/">Team</a>
+      </li> 
+       <div class="dropdown-content">
+        <a href="http://localhost:8000/teacher_signup">Join us</a>
+      </div>
+      </div>
+
+      <li class="nav-item-indent nav-item">
+        <a class="nav-link dropbtn nav-text {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="http://localhost:8000/about">About</a>
+      </li> 
+      <!--
+      <!--
+      <div class="dropdown-content">
+        <a href="#">Member Policy</a>
+      </div>
+      </div>
+      -->
+ 
+     </ul>
+  </div>
+
+</nav>
+</div>
+
+{% block body %}
+{% endblock %}
+
+<div id="overlay-bottom"></div>
+</body>
+
+{% block script %}
+{% endblock %} 
+</html>
+    

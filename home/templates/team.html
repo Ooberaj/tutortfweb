@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<style type="text/css">
+.left-nav{
+  background-color: #0789BB;
+  color: white;
+  padding:10px;
+  width:200px;
+  float: left;
+  margin-top: 30px;
+}
+.link-nav{
+  color:white;
+}
+a:hover{
+  text-decoration: none;
+  background-color: transparent;
+  color:white;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="content-container" style="position:relative;top:15%;z-index:-1;width:95%;height:2750px;background-color: #DFDCE3
+;">
+<div class="container">
+
+<div class="row justify-content-md-center">
+<div style="padding:20px">
+<h1>Become a Teacher at Tutoring the Future!</h1>
+
+<div class="col col-lg-3" style="float: left;">
+<div class="left-nav">
+<a class="link-nav" href="#trespons">Tutor Responsibilities</a><br /><br />
+<a class="link-nav" href="#drespons">Debate Teacher Responsibilities</a><br /><br />
+<a class="link-nav" href="#jrespons">Java Code Teacher Responsibilities</a><br /><br />
+<a class="link-nav" href="#vlocations">Volunteering Locations</a><br /><br />
+<a class="link-nav" href="#vtimes">Volunteering Times</a><br /><br />
+</div>
+</div>
+
+
+<div class="col-lg-9 col-md-auto" style="float: right;">
+<a name="trespons"></a>
+<h3 style="margin-top:30px">Tutor Responsibilities</h3>
+<a name="drespons"></a>
+<p>According to merriam-webster, a tutor is a person charged with the instruction and guidance of another.Tutoring the Future tutors are expected to promote student learning and a growth mindset at all times.
+<ul>
+<li>Tutors are to guide students to the answer by pointing out key concepts, giving hints, or helping students in any way so they reach the answer.</li>
+<li>Tutors are not answer sheets.</li>
+<li>Math
+<ul>
+  <li>Tutors are encouraged to clarify and teach concepts students are having trouble with.</li>
+  <li>Tutors are encouraged to provide examples and analogies so the student better understand the concepts. Tutors should provide a variety of examples, and not just the simplest forms.</li>
+  <li>It is okay if students make mistakes because that is how they learn. Tutors should point out these mistakes. They should always ask students to find their own mistakes first and then go over the mistake with them.
+</li>
+</ul>
+</li>
+<li>English
+<ul>
+  <li>Never let students plagiarize. If students plan on using information that is not their own, they should always cite it correctly.</li>
+  <li>Tutors are encouraged not to give answers blatantly, but rather lead them to the answer.</li>
+  <li>Tutors cannot write essays for students. </li>
+  <li>When helping with essays, Tutors are encouraged to proofread and give feedback on how they can fix their mistakes. Tutors can help students generate ideas by giving them background on a topic that related to their essay and give them general ideas.</li>
+</ul>
+</li>
+</ul>
+Tutors should answer all relevant questions. In addition to answering the question, tutors are to provide a thorough explanation of the answer.
+</p>
+
+<h3>Debate Teacher Responsibilities</h3>
+<a name="jrespons"></a>
+<p>Debate teachers should have at least one year of debating experience and should have a strong understanding of debate concepts, preferably varsity debate concepts as well. They should also have a good understanding of logic, ethical issues, and some debate philosophy. 
+<ul>
+  <li>Debate teachers should plan on coming to all session. </li>
+  <li>Debate teachers should be able to do mock debates. </li>
+  <li>Debate teachers should be able to work with students individually.</li>
+  <li>Debate teachers cannot write arguments for the students. Instead, they can give feedback and ideas for improving the student's argument.</li>
+  <li>Debate teachers are encouraged to help students generate ideas by giving them background on a topic relevant to the resolution. We recommend you going over the slideshow and curriculum curated by Tutoring the Future as well(coming soon).</li>
+</ul>
+</p>
+
+
+<h3>Java Code Teacher Responsibilities</h3>
+<a name="vlocations"></a>
+<p>Tutors should be adept in the Java Programming language and should be able to teach and clarify Java Programming concepts. Tutors should be able to swiftly interpret the logic, syntax, and structure of a program. They should also have a minimum of knowledge in the following topics:
+<ul>
+<li>Eclipse environment</li>
+<li>Variable</li>
+<li>Methods/Functions</li>
+<li>Arithmetic Operators</li>
+<li>User Input</li>
+<li>Conditional Statements</li>
+<li>Constructors</li>
+<li>Arrays</li>
+<li>Loops</li>
+<li>Custom Objects</li>
+<li>Inheritance</li>
+<li>Parsing</li>
+<li>Switch Statements</li>
+<li>Polymorphism</li>
+</ul>
+We recommend you going over the slideshow and curriculum curated by Tutoring the Future as well(coming soon). Programming teachers cannot write code for the students, other than when they are using code to teach. Instead, they can give feedback and ideas for improving the student's code. 
+</p>
+
+<h3>Volunteering Locations</h3>
+<a name="vtimes"></a>
+<iframe
+  width="700"
+  height="350"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGzg9BEfiljMSr35U5EremO0VZQ7OBZCM
+    &q=Quimby+Oak+Middle+School,San+Jose+CA" allowfullscreen>
+</iframe>
+<p>We are currently only placed in Quimby Oak Middle School but plan to expand to other schools and also into libraries. So please be patient until we can get this done.</p>
+
+<h3>Volunteering Times</h3>
+<p>Tutoring the Future will be placed at Quimby Oak Middle Schools on Wendensdays at 2:15am.</p>
+
+<a href="http://localhost:8000/teacher_signup" style="position:relative;top:50px"><button type="button" class="btn btn-lg btn-outline-primary">Apply Now!</button></a>
+</div>
+
+</div>
+
+</div>
+</div>
+<footer id="footer">
+<div style="padding:10px;">
+<div style="float:right;padding:20px 80px 0 0">
+  <a href="http://localhost:8000">Home</a><br />
+  <a href="http://localhost:8000/programs/">Programs</a><br />
+  <a href="http://localhost:8000/team">Team</a><br />
+  <a href="http://localhost:8000/about">About</a><br />
+  <br /><br />
+  <a href="#">Back to the Top</a>
+</div>
+  <p style="color: white">Contact us:<br />someone@example.com</p>
+  <p style="color: white">Website designed and mantained by: Yuvraj Virk</p>
+    <br />
+  <p style="color: white">©tutoringthefuture.com. All rights reserved.</p>
+</div>
+</footer>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+
+if($(window).height()/$(window).width()>1){
+  var el9=$("#footer");
+  var h=$("#content-container").height();
+  el9.css("top",h+"px");
+}else{
+  var el9=$("#footer");
+  var h=$("#content-container").height();
+  el9.css("top",h-250+"px");
+}
+</script>
+{% endblock %}

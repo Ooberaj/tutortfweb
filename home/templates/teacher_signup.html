@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<style type="text/css">
+.form-control{
+  height:50px;
+}
+ul{
+    list-style-type: none;
+}
+
+#id_reason{
+  height: 400px;
+}
+#id_qualifications{
+  height:400px;
+}
+#id_methods{
+  height:400px;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="content-container" style="position:relative;top:15%;z-index:-1;width:95%;height:3550px;background-color: #DFDCE3
+;">
+<div class="container">
+<div class="row">
+
+<div class="col-lg-6">
+<div class="col-lg-6" style="float:left;position: fixed;">
+<h1 style="margin-left: -20px;margin-top: 25%">Ready to Teach? Yes! Well, let's get you signed up and started.</h1>
+</div>
+</div>
+
+<div class="col-lg-6" style="float: right;">
+<form method="POST">
+{% csrf_token %}
+<div class="form-group">
+  {% for field in form %}
+  {{ field.label_tag }}
+    {% if forloop.counter == 9 %}
+    (Ex:1234567890)
+    {% endif %}
+  <br>
+    {{ field }}
+    {% for error in field.errors %}
+      <p style="color: red">{{ error }}</p>
+    {% endfor %}
+  {% endfor %}
+</div>
+  <button type="submit" class="btn btn-primary">Sign up</button>
+</form>
+</div>
+
+</div>
+</div>
+
+<footer id="footer">
+<div style="padding:10px;">
+<div style="float:right;padding:20px 80px 0 0">
+  <a href="http://localhost:8000">Home</a><br />
+  <a href="http://localhost:8000/programs/">Programs</a><br />
+  <a href="http://localhost:8000/team">Team</a><br />
+  <a href="http://localhost:8000/about">About</a><br />
+  <br /><br />
+  <a href="#">Back to the Top</a>
+</div>
+  <p style="color: white">Contact us:<br />someone@example.com</p>
+  <p style="color: white">Website designed and mantained by: Yuvraj Virk</p>
+    <br />
+  <p style="color: white">©tutoringthefuture.com. All rights reserved.</p>
+</div>
+</footer>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+  if($(window).height()/$(window).width()>1){
+    var elem= $('#extra');
+    elem.css('display','none');
+
+    var el9=$("#footer");
+    var h=$("#content-container").height();
+    el9.css("top",h-100+"px");
+  }else{
+    var el9=$("#footer");
+    var h=$("#content-container").height();
+    el9.css("top",h-400+"px");
+  }
+</script>
+{% endblock %}

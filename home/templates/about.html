@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<style type="text/css">
+
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="content-container" style="position:relative;top:15%;z-index:-1;width:95%;height:1400px;background-color: #D5D5D5;">
+<div class="container">
+<div class="row justify-content-md-center">
+
+<div class="col-lg-5 col-md-auto">
+<h1>About</h1>
+<img src='{% static "images/shehbaz_headshot.jpg" %}' height="440px" width="400px">
+</div>
+
+<div class="col-lg-12" style="margin-top: 20px">
+<p>“The future is in the hand of the next generation. This generation must power and develop the minds of the next generation.” Shehbaz Singh Virk.</p>
+<p>I founded Tutoring the Future because I wanted students to have a greater opportunity to succeed. There is a ton of knowledge and variety of skills that are necessary for students to develop to succeed in the real world. I want students to be engaged in learning and be proficient in what they learn at school.</p>
+<p>A lot of the time, school goes too fast for students, and they fall behind. Tutoring the Future provides students with the opportunity to clear up any misunderstandings and gain further insight into what they are learning. Speeding through lessons because the state requires it, does not mean the student will understand everything that is being taught. It is important to remember the big picture: students learn so they can apply concepts to those concepts to to the real world. Tutoring the Future allows students to master concepts, so they can apply them in the real world.</p>
+<p>An essential part of life is communication. Your thoughts and ideas are worth much more when you can effectively verbalize them. Debate helps students analyze a variety of different topics, viewpoints, and the different perspectives that can be taken off a single statement. Through exposure to a wide range of different topics including economics, politics, philosophy, and much more students gain confidence and are able to better communicate their views and beliefs. </p>
+<p>In the 21st century, it is becoming more and more important for students to be able to work with code. Programming is used in a variety of different fields and its applications are endless. Programming teaches students more than coding. Through programming many of students skills are enhanced. Their ability to analyze situations, recognize different situations, and problem solve tremendously increases. These essential skills are applicable to a multitude of fields.</p>
+</div>
+
+</div>
+</div>
+
+<footer id="footer">
+<div style="padding:10px;">
+<div style="float:right;padding:20px 80px 0 0">
+  <a href="http://localhost:8000">Home</a><br />
+  <a href="http://localhost:8000/programs/">Programs</a><br />
+  <a href="http://localhost:8000/team">Team</a><br />
+  <a href="http://localhost:8000/about">About</a><br />
+  <br /><br />
+  <a href="#">Back to the Top</a>
+</div>
+  <p style="color: white">Contact us:<br />someone@example.com</p>
+  <p style="color: white">Website designed and mantained by: Yuvraj Virk</p>
+  <br />
+  <p style="color: white">©tutoringthefuture.com. All rights reserved.</p>
+</div>
+</footer>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+if($(window).height()/$(window).width()>1){
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h-150+"px");
+  
+}else{
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h-300+"px");
+}
+
+</script>
+{% endblock %}

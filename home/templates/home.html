@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style type="text/css">
+	p{
+		font-family: 'Roboto', sans-serif;
+		font-size: 1em;
+		color:black;
+	}
+	a:hover{
+		text-decoration: none
+		color:white;
+		background-color: transparent;
+	}
+	h3{
+		color:white;
+	}
+	.btn-lg, .btn-lg:visited {
+    	color: #0789BB !important;
+    	border-color: #0789BB;
+	}
+	.btn-lg:hover, .btn-lg :active{
+		color: white !important;
+    	border-color: #0789BB;
+    	background-color: #0789BB;
+	}
+	.bm, .bm:visited {
+    	color: white !important;
+    	border-color: white;
+	}
+	.bm:hover, .bm :active{
+		color: white !important;
+    	border-color: #D5D5D5;
+    	background-color: #D5D5D5;
+	}
+	.triangleLeft{
+              width: 0;
+              height: 0;
+              border-top-width: 400px;
+              border-top-style: solid;
+              border-top-color: transparent;
+              border-left-width: 1186px;
+              border-left-style: solid;
+              position: absolute;
+              color:#6D7993;
+              margin-left: -10px;
+     }
+     .triangleRight{
+              width: 0;
+              height: 0;
+              border-bottom-width: 400px;
+              border-bottom-style: solid;
+              border-bottom-color: transparent;
+              border-right-width: 1187px;
+              border-right-style: solid;
+              position: absolute;
+              color:#D5D5D5;
+              margin-left: -10px;
+     }
+     .box1{
+     	width: 100%;
+     	height: 110%;
+        background-color:#6D7993;
+        position:absolute;
+        margin-left: -10px;
+        margin-top: -8px;
+     }
+
+     .parallax { 
+    /* The image used */
+    background-image: url("/static/images/learning.png");
+
+    /* Set a specific height */
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ #ffd632
+
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="content-container" style="position:relative;width:95%;height:1200px;z-index: -1; background-color:#D5D5D5;">
+<div class="col-xs-1" style="margin-top:7%;padding:0">
+
+<div class="row justify-content-md-center" style="max-height: ;position:relative;">
+
+<img class="col-lg-9 col-md-auto" src='static/images/raised-hand-2.png' style="position:relative;height:74%;width:74%;padding:0;left:5px">
+
+<div class="col-lg-3" style="margin-top:3%;z-index: 1;">
+<h1>Our Goal</h1><p>The mission of Tutoring the Future is to give kids the opportunity they need to succeed in school and beyond. Students are the future and it is vital that we invest in that future. Tutoring the Future wants to provide students opportunities to develop essential skills that will help them succeed. Tutoring the Future wants to empower students to become the change they want to see in the world.</p> 
+<a href="http://localhost:8000/about"><button type="button" style="position:relative;" class="btn btn-lg btn-outline-info">More...</button></a>
+</div>
+
+</div>
+</div>
+
+<!--<div style="margin-top:-45%;background: #D3D3D3;position: absolute;padding: 10px;opacity: 0.6;">-->
+<div class="triangleRight"></div>
+<h1 style="position:relative;font-size: 3.5em;top: 100px;left:65%;height:0px;width:100px" id="head1">Programs</h1>
+
+<div id="content1" style="position:relative;top: 100px;height:0px;width:400px;color:white;z-index:1000">
+
+<div id="tutoring">
+<h3>Tutoring</h3>
+<ul>
+<li>Have help on your work with highschool students who had to go through the same thing.</li>
+<li>Become ready to learn and absorb knowledge better at the next day at school.</li>
+</ul>
+<a href="http://localhost:8000/programs/#tutoring"><button type="button" style="position:relative;" class="btn bm btn-outline-info">Learn More</button></a>
+</div>
+
+<div id="debate" style="position:relative;left:70%;margin-top:-10%">
+<h3>Debate</h3>
+<ul>
+<li>Develop public speaking skills</li>
+<li>Learn how to develop and deliver an argument</li>
+</ul>
+<a href="http://localhost:8000/programs/#debate"><button type="button" style="position:relative;" class="btn bm btn-outline-info">Learn More</button></a>
+</div>
+
+<div id="programming" style="position:relative;left:150%;margin-top:-10%; width:500px;">
+<h3>Programming</h3>
+<ul>
+<li>Learn the fundamentals and some more advanced topics in Java step by step with our teachers</li>
+<li>After learning the Java we teach, we all will complete a real-world programming project together!</li>
+</ul>
+<a href="http://localhost:8000/programs/#programming"><button type="button" style="position:relative;" class="btn bm btn-outline-info">Learn More</button></a>
+</div>
+
+</div>
+
+<div id="content2" style="position:relative;top:550px;z-index: 1000">
+<h1 style="font-size: 3.5em;height:0">Join Us!</h1>
+<p style="position:relative;height:0;z-index:1000;top:75px;width:50%;">Are you interested in becoming a tutor, debate teacher, or programming teacher at Tutoring the Future? Well, we're looking for highschool or college students who are knowledgebale and passionate in any of these fields. Does this description fit you? If it does, go and apply for the position and become part of the Tutoring the Future team. </p>
+<a href="http://localhost:8000/team"><button type="button" style="position:absolute;top:250px" class="btn btnJoin btn-lg btn-outline-info">Learn more</button></a>
+</div>
+
+<div style="margin-top: -8px">
+
+<div class="box1 parallax" style="height: 80%;margin-top:-23px;opacity: 1;z-index: -1"></div>
+</div>
+
+<div id="sep" style="margin-top: 55%;">
+<div class="triangleLeft phonecomp" style="color: #D5D5D5;margin-top: -200px"></div>
+<div class="box1" style="height:30%;margin-top:140px;background-color: #D5D5D5"></div>
+</div>
+
+<footer id="footer">
+<div style="padding:10px;">
+<div style="float:right;padding:20px 80px 0 0">
+  <a href="http://localhost:8000">Home</a><br />
+  <a href="http://localhost:8000/programs/">Programs</a><br />
+  <a href="http://localhost:8000/team">Team</a><br />
+  <a href="http://localhost:8000/about">About</a><br />
+  <br /><br />
+  <a href="#">Back to the Top</a>
+</div>
+  <p style="color: white">Contact us:<br />someone@example.com</p>
+  <p style="color: white">Website designed and mantained by: Yuvraj Virk</p>
+  <br />
+  <p style="color: white">©tutoringthefuture.com. All rights reserved.</p>
+</div>
+</footer>
+
+</div>
+<!--<img class="img-responsive" src='static/images/LeoAcro.png' width="60%" height="80%" style="margin-left: 90%;">-->
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+if($(window).height()/$(window).width()<1){
+	var el = $(".triangleLeft");
+	var width=$(window).width();
+	var w = ((width / 1.05) | 0); // calculate & trim decimals
+	el.css("border-left-width", w + "px");
+
+	var height=$(window).height()
+	var h = ((height / 2) | 0); // calculate & trim decimals
+	el.css("border-top-width", h + "px");	
+
+	var el = $(".triangleRight");
+	var width=$(window).width();
+	var w = ((width / 1.05) | 0); // calculate & trim decimals
+	el.css("border-right-width", w + "px");
+
+	var height=$(window).height()
+	var h = ((height / 2) | 0); // calculate & trim decimals
+	el.css("border-bottom-width", h + "px");	
+}else{
+	var el = $(".triangleLeft");
+	var width=$(window).width();
+	var w = ((width / 1.05) | 0); // calculate & trim decimals
+	el.css("border-left-width", w + "px");
+	el.css("border-top-width", 100 + "px");	
+
+	var el = $(".triangleRight");
+	var width=$(window).width();
+	var w = ((width / 1.05) | 0); // calculate & trim decimals
+	el.css("border-right-width", w + "px");
+	el.css("border-bottom-width", 100 + "px");	
+}
+
+if($(window).height()/$(window).width()>1){
+
+	var el1 = $("#programming");
+	el1.css("left","0px");
+	el1.css("top","200px");	
+
+	var el3=$("#debate");
+	el3.css("left","0px")
+	el3.css("top","100px");
+
+	var el4=$("#sep");
+	el4.css("margin-top","70%");
+
+	var el5=$("#content1");
+	el5.css("margin","0 auto");
+	el5.css("width","100%");
+	el5.css("top","100px");
+
+	var el6=$("#content2");
+	el6.css("top","700px");
+
+	var el7=$(".btnJoin");
+	el7.css("top","300px");
+
+	var el8=$("#content-container");
+	el8.css("height","120%");
+
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h-150+"px");
+
+	var el10=$("#head1");
+	el10.css("top","0px");
+
+	var el11=$(".phonecomp");
+	el11.css("margin-top","40px");
+
+	var el12=$(".parallax");
+	el12.css("height","50%");
+
+}else{
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h+450+"px");
+}
+
+
+var ell= $(".box1");
+var mar=$(".triangleLeft").css("border-top-width");
+ell.css("margin-top", mar-200);
+
+</script>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<style type="text/css">
+.info{
+	padding: 20px;
+	border:10px solid white;
+	margin:40px;
+}
+h1{
+	color: white;
+}
+.btn-lg, .btn-lg:visited {
+    color: white !important;
+   	border-color: white;
+}
+.btn-lg:hover, .btn-lg :active{
+	color: white !important;
+   	border-color: #F78733;
+   	background-color: #F78733;
+}
+.bm, .bm:visited {
+   	color: #D5D5D5 !important;
+   	border-color: #D5D5D5;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="content-container" style="position:relative;top:15%;z-index:-1;width:95%;height:3330px;background-color: #4ABDAC;">
+<a name="tutoring"></a> 
+<div class="info">
+<h1>Tutoring</h1>
+<img class="img-fluid center" src='{% static "images/tutoring.png" %}' style="padding-bottom: 10px;" width="500px" height="500px">
+<p>Tutoring the Future offers tutoring in all academic subjects and can also provide help with elective classes. Tutors will be knowledgeable high school students who will have gone through these classes in middle school and will be able to share useful tips and tricks. All students will benefit from tutoring. Struggling students will receive the extra attention and help they will need. Average students will be able to clarify any misconceptions they have and master skills they feel uneasy about. Even students who usually excel in class will be able to fix silly mistakes and gain more insight into the topics from tutors. Tutors will be knowledgeable high school students who will have gone through these classes in middle school and will be able to share useful tips and tricks.<br />Subjects offered include, but are not limited to:
+<ul>
+<li>Math<ul><li>Common Core Math 7</li><li>Common Core Math 8</li><li>Math 1</li></ul></li>
+<li>Science</li>
+<li>English</li>
+<li>Soical Studies</li>
+</ul>
+</p>
+<a href="http://localhost:8000/student_signup"><button type="button" style="position:relative;" class="btn btn-lg btn-outline-info">Sign up</button></a>
+</div>
+
+<a name="debate"></a> 
+<div class="info">
+<h1>Debate</h1>
+<img class="img-fluid center" src='{% static "images/debate.svg" %}' style="padding-bottom: 10px;" width="500px" height="500px">
+<p>Communication is an integral part of life and a necessary skill to develop. Through debate students will learn important analysis and critical thinking skills which directly relate to their english classes. Also, debate will help students hone their skills to think on the spot and come with reasons for their opinions. Furthermore, debate will help students learn more about the world around them and will have a better understanding of how the world functions. The ability to effectively articulate your thoughts and emotions into words is key real world skill. Debate will help students gain essential skills for class presentations, interviews and everyday communication.<br /><br>Type of Debate:<br>
+Tutoring the Future will focus on Lincoln-Douglas Debate. Lincoln-Douglas or LD is a one on one debate that focuses on logic, ethical issues, and philosophy. The debate topics are called resolutions and are moral statements whose values are debated. The affirmative argues that the resolution is true, arguing in favor of the resolution, while the negative argues against the resolution. LD debate concepts are applicable to other debate forms as well such as Parliamentary Debate. So if students know how to do LD debate, they will be able to easily do other debate forms. Furthermore, concepts taught in debate are universally applicable. Learning how to format arguments in a persuasive and effective way will allow students to become better writers and communicators.  
+</p>
+<a href="http://localhost:8000/student_signup"><button type="button" style="position:relative;" class="btn btn-lg btn-outline-info">Sign up</button></a>
+</div>
+
+<a name="programming"></a> 
+<div class="info">
+<h1>Programming</h1>
+<img class="img-fluid center" src='{% static "images/java.png" %}' style="padding-bottom: 10px;" width="500px" height="500px">
+<p>Programming is an essential 21st century skill. Tutoring the Future will teach you this skill with a meticulously planned curriculum. Utilizing this curriculum, our high school student teachers will teach you the fundamentals of the Java programming language and as well many advanced topics. An overview of the topics we will definitely cover:
+<ul>
+<li>Eclipse environment</li>
+<li>Variable</li>
+<li>Methods/Functions</li>
+<li>Arithmetic Operators</li>
+<li>User Input</li>
+<li>Conditional Statements</li>
+<li>Constructors</li>
+<li>Arrays</li>
+<li>Loops</li>
+<li>Custom Objects</li>
+<li>Inheritance</li>
+<li>Parsing</li>
+<li>Switch Statements</li>
+<li>Polymorphism</li>
+</ul>
+But what makes are Java lessons specials is that when we’re done teaching you, we will have have you create a final programming project. Don’t be intimidated, our teachers will be right next to you every step of the way. 
+</p>
+<a href="http://localhost:8000/student_signup"><button type="button" style="position:relative;" class="btn btn-lg btn-outline-info">Sign up</button></a>
+</div>
+
+<footer id="footer">
+<div style="padding:10px;">
+<div style="float:right;padding:20px 80px 0 0">
+  <a href="http://localhost:8000">Home</a><br />
+  <a href="http://localhost:8000/programs/">Programs</a><br />
+  <a href="http://localhost:8000/team">Team</a><br />
+  <a href="http://localhost:8000/about">About</a><br />
+  <br /><br />
+  <a href="#">Back to the Top</a>
+</div>
+  <p style="color: white">Contact us:<br />someone@example.com</p>
+  <p style="color: white">Website designed and mantained by: Yuvraj Virk</p>
+  <br />
+  <p style="color: white">©tutoringthefuture.com. All rights reserved.</p>
+</div>
+</footer>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+if($(window).height()/$(window).width()>1){
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h+"px");
+
+}else{
+	var el9=$("#footer");
+	var h=$("#content-container").height();
+	el9.css("top",h+"px");
+}
+
+</script>
+{% endblock %}
